@@ -1,0 +1,1 @@
+# Site social em Django para a disciplina de Programação para Internet II do Professor Warlles Machado.
