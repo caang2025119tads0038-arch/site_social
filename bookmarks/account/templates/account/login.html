@@ -3,11 +3,11 @@
 {% block title %}Autenticar{% endblock %}
 
 {% block content %}
-    <h1>Log-in</h1>
-    <p>Faça a autenticação por meio do seguinte formulário:</p>
-    <form method="post">
-        {{ form.as_p }}
-        {% csrf_token %}
-        <p><input type="submit" value="Autenticar"></p>
-    </form>
+<h1>Log-in</h1>
+<p>Faça a autenticação por meio do seguinte formulário:</p>
+<form method="post">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <p><input type="submit" value="Autenticar"></p>
+</form>
 {% endblock %}

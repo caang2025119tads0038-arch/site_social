@@ -3,20 +3,20 @@
 {% block title %}Autenticar{% endblock %}
 
 {% block content %}
-    <h1>Autenticar</h1>
-    {% if form.errors %}
-        <p>
-            Nome ou senha errados. Tente novamente.
-        </p>
-    {% else %}
-        <p>Use o seguinte formulário para autenticar: </p>
-    {% endif %}
-    <div class="login-form">
-        <form action="{% url 'login' %}" method="post">
-            {{ form.as_p }}
-            {% csrf_token %}
-            <input type="hidden" name="next" value="{{ next }}" />
-            <p><input type="submit" value="Autenticar"></p>
-        </form>
-    </div>
+<h1>Autenticar</h1>
+{% if form.errors %}
+<p>
+    Nome ou senha errados. Tente novamente.
+</p>
+{% else %}
+<p>Use o seguinte formulário para autenticar: </p>
+{% endif %}
+<div class="login-form">
+    <form action="{% url 'login' %}" method="post">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ next }}" />
+        <p><input type="submit" value="Autenticar"></p>
+    </form>
+</div>
 {% endblock %}
