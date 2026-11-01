@@ -4,10 +4,19 @@
 
 {% block content %}
 <h1>Log-in</h1>
-<p>Faça a autenticação por meio do seguinte formulário:</p>
+<p>
+    Faça a autenticação por meio do seguinte formulário:
+    Se você não tem uma conta, <a href="{% url "register" %}">crie uma.</a>.
+</p>
 <form method="post">
     {{ form.as_p }}
     {% csrf_token %}
     <p><input type="submit" value="Autenticar"></p>
 </form>
+<p>
+    <a href="{% url " password_reset" %}">
+        Esqueceu sua senha?
+    </a>
+</p>
+
 {% endblock %}
